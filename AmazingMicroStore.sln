@@ -3,9 +3,60 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{1E609066-1B1A-421C-94EA-6D0FF75C540F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductCatalogMicroservice", "ProductCatalogMicroservice", "{BDD117A2-CFF3-4643-A8EB-2C1B5892E582}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Service", "1 - Service", "{5705CA27-F28C-4C54-A9D7-C0DA34385104}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{DE868400-C3B3-45DC-BFB5-880AFD79145B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{6F13B198-CB14-4713-8F9B-730B8018443F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{1FD2C62E-BE13-42CF-A213-45FE77122FD4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmazingMicroStore.ProductCatalogMicroservice.Domain", "AmazingMicroStore.ProductCatalogMicroservice.Domain\AmazingMicroStore.ProductCatalogMicroservice.Domain.csproj", "{24F1DD41-C52C-454D-A5D2-8174CB096641}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmazingMicroStore.Infra.DataAccess", "AmazingMicroStore.Infra.DataAccess\AmazingMicroStore.Infra.DataAccess.csproj", "{BA9584D8-FDBA-4526-9439-65FF6233D612}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CatalogProductManager", "CatalogProductManager", "{D6511BCB-6F3C-47AC-8377-C4EDB1AAE834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogProductManagerWebApp", "CatalogProductManagerWebApp\CatalogProductManagerWebApp.csproj", "{B7561EDF-E812-4CAC-A7A6-E4CE7A2EFFA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AmazingMicroStoreApp", "AmazingMicroStoreApp", "{E764367E-56CA-48BC-8074-9D6E6F14A3E5}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24F1DD41-C52C-454D-A5D2-8174CB096641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24F1DD41-C52C-454D-A5D2-8174CB096641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24F1DD41-C52C-454D-A5D2-8174CB096641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24F1DD41-C52C-454D-A5D2-8174CB096641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA9584D8-FDBA-4526-9439-65FF6233D612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA9584D8-FDBA-4526-9439-65FF6233D612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA9584D8-FDBA-4526-9439-65FF6233D612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA9584D8-FDBA-4526-9439-65FF6233D612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7561EDF-E812-4CAC-A7A6-E4CE7A2EFFA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7561EDF-E812-4CAC-A7A6-E4CE7A2EFFA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7561EDF-E812-4CAC-A7A6-E4CE7A2EFFA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7561EDF-E812-4CAC-A7A6-E4CE7A2EFFA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5705CA27-F28C-4C54-A9D7-C0DA34385104} = {BDD117A2-CFF3-4643-A8EB-2C1B5892E582}
+		{DE868400-C3B3-45DC-BFB5-880AFD79145B} = {BDD117A2-CFF3-4643-A8EB-2C1B5892E582}
+		{6F13B198-CB14-4713-8F9B-730B8018443F} = {BDD117A2-CFF3-4643-A8EB-2C1B5892E582}
+		{1FD2C62E-BE13-42CF-A213-45FE77122FD4} = {BDD117A2-CFF3-4643-A8EB-2C1B5892E582}
+		{24F1DD41-C52C-454D-A5D2-8174CB096641} = {6F13B198-CB14-4713-8F9B-730B8018443F}
+		{BA9584D8-FDBA-4526-9439-65FF6233D612} = {1FD2C62E-BE13-42CF-A213-45FE77122FD4}
+		{D6511BCB-6F3C-47AC-8377-C4EDB1AAE834} = {1E609066-1B1A-421C-94EA-6D0FF75C540F}
+		{B7561EDF-E812-4CAC-A7A6-E4CE7A2EFFA3} = {D6511BCB-6F3C-47AC-8377-C4EDB1AAE834}
+		{E764367E-56CA-48BC-8074-9D6E6F14A3E5} = {1E609066-1B1A-421C-94EA-6D0FF75C540F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4A7ADFAC-6353-4A79-B910-9C68489A3311}
