@@ -8,7 +8,7 @@ namespace AmazingMicroStore.ProductCatalogMicroservice.Domain.Services
 {
     public class CatalogProductQueryService
     {
-        readonly ICatalogProductQueryRepository _catalogProductQueryRepository;
+        private readonly ICatalogProductQueryRepository _catalogProductQueryRepository;
 
         public CatalogProductQueryService(ICatalogProductQueryRepository catalogProductQueryRepository)
         {
