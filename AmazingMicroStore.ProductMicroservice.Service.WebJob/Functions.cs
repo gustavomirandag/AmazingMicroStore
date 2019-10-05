@@ -30,7 +30,7 @@ namespace AmazingMicroStore.ProductMicroservice.Service.WebJob
         public static void ProcessAddProductCommandQueueMessage([QueueTrigger(AddProductCommand.ConstQueueName)] string message, ILogger logger)
         {
             logger.LogInformation($"{message}\n");
-
+            new Functions();
             var command = JsonConvert.DeserializeObject<AddProductCommand>(message);
             _commandHandler.Handle(command);
         }
@@ -38,7 +38,7 @@ namespace AmazingMicroStore.ProductMicroservice.Service.WebJob
         public static void ProcessUpdateProductCommandQueueMessage([QueueTrigger(UpdateProductCommand.ConstQueueName)] string message, ILogger logger)
         {
             logger.LogInformation($"{message}\n");
-
+            new Functions();
             var command = JsonConvert.DeserializeObject<UpdateProductCommand>(message);
             _commandHandler.Handle(command);
         }
@@ -46,7 +46,7 @@ namespace AmazingMicroStore.ProductMicroservice.Service.WebJob
         public static void ProcessDeleteProductCommandQueueMessage([QueueTrigger(DeleteProductCommand.ConstQueueName)] string message, ILogger logger)
         {
             logger.LogInformation($"{message}\n");
-
+            new Functions();
             var command = JsonConvert.DeserializeObject<DeleteProductCommand>(message);
             _commandHandler.Handle(command);
         }

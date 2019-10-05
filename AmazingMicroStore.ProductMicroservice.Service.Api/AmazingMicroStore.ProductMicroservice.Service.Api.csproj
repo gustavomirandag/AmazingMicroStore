@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -216,7 +219,6 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ProductDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -310,6 +312,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AmazingMicroStore.ProductMicroservice.Application\AmazingMicroStore.ProductMicroservice.Application.csproj">
+      <Project>{DAA4618D-83C7-45FF-AF92-8351DCC7ADD7}</Project>
+      <Name>AmazingMicroStore.ProductMicroservice.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AmazingMicroStore.ProductMicroservice.Domain\AmazingMicroStore.ProductMicroservice.Domain.csproj">
+      <Project>{8510C719-5E4C-4F83-AEF3-7F6F8D566272}</Project>
+      <Name>AmazingMicroStore.ProductMicroservice.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AmazingMicroStore.ProductMicroservice.Infrastructure\AmazingMicroStore.ProductMicroservice.Infrastructure.csproj">
+      <Project>{D9C6F722-2E9A-465C-AA2F-99EBAF307039}</Project>
+      <Name>AmazingMicroStore.ProductMicroservice.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

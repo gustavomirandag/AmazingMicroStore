@@ -25,7 +25,7 @@ namespace AmazingMicroStore.ProductMicroservice.Infrastructure.CQRS
             CloudQueue cloudQueue = queueClient.GetQueueReference(message.QueueName);
 
             //Crio a fila se ela não existir
-            await cloudQueue.CreateIfNotExistsAsync();
+            bool result =  cloudQueue.CreateIfNotExistsAsync().Result;
 
             //Crio uma mensagem a partir do objeto serializado
             CloudQueueMessage cloudQueueMessage = new CloudQueueMessage(JsonConvert.SerializeObject(message));
@@ -53,6 +53,16 @@ namespace AmazingMicroStore.ProductMicroservice.Infrastructure.CQRS
             var message = cloudQueue.GetMessageAsync().Result;
             await cloudQueue.DeleteMessageAsync(message);
             return message.AsString;
+        }
+
+        public void Enqueue(QueueMessage message)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Dequeue(string queueName)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -70,7 +70,7 @@ namespace AmazingMicroStore.ProductMicroservice.Infrastructure.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Server=tcp:productmicroservice-db-server.database.windows.net,1433;Initial Catalog=ProductMicroservice-Db;Persist Security Info=False;User ID=ale;Password=@dsInf123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;.
+        ///   Looks up a localized string similar to Server=tcp:productmicroservice-db-server.database.windows.net,1433;Initial Catalog=amazingmicrostore-product-microservice-db;Persist Security Info=False;User ID=ale;Password=@dsInf123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;.
         /// </summary>
         internal static string DbConnectionString {
             get {

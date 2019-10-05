@@ -13,10 +13,10 @@ namespace AmazingMicroStore.ProductMicroservice.Application
     public class ApiAppService
     {
         private readonly IQueue _queue;
-        private readonly Mapper _mapper;
+        private readonly IMapper _mapper;
         private readonly ProductService _productQueryService;
 
-        public ApiAppService(IQueue queue, Mapper mapper, ProductService productQueryService)
+        public ApiAppService(IQueue queue, IMapper mapper, ProductService productQueryService)
         {
             _queue = queue;
             _mapper = mapper;
@@ -27,19 +27,19 @@ namespace AmazingMicroStore.ProductMicroservice.Application
         public void AddProduct(ProductDTO productDTO)
         {
             var command = _mapper.Map<AddProductCommand>(productDTO);
-            _queue.EnqueueAsync(command);
+            _queue.Enqueue(command);
         }
 
         public void UpdateProduct(ProductDTO productDTO)
         {
             var command = _mapper.Map<UpdateProductCommand>(productDTO);
-            _queue.EnqueueAsync(command);
+            _queue.Enqueue(command);
         }
 
         public void DeleteProduct(ProductDTO productDTO)
         {
             var command = _mapper.Map<DeleteProductCommand>(productDTO);
-            _queue.EnqueueAsync(command);
+            _queue.Enqueue(command);
         }
         //======================
 

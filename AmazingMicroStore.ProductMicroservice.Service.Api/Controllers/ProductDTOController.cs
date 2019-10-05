@@ -9,14 +9,41 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using AmazingMicroStore.ProductMicroservice.Application;
 using AmazingMicroStore.ProductMicroservice.Application.AppModel.DTO;
+using AmazingMicroStore.ProductMicroservice.Application.AutoMapper;
+using AmazingMicroStore.ProductMicroservice.Domain.Services;
+using AmazingMicroStore.ProductMicroservice.Infrastructure.CQRS;
+using AmazingMicroStore.ProductMicroservice.Infrastructure.DataAccess.Repositories.EFCore;
 using AmazingMicroStore.ProductMicroservice.Service.Api.Contexts;
+using AutoMapper;
 
 namespace AmazingMicroStore.ProductMicroservice.Service.Api.Controllers
 {
     public class ProductDTOController : ApiController
     {
         private ProductContext db = new ProductContext();
+        private ApiAppService apiAppService;
+
+        public ProductDTOController()
+        {
+            ProductDTO product = new ProductDTO
+            {
+                Name = "Dell PC",
+                Price = 3000,
+                Quantity = 5
+            };
+
+            var dtoConfig = AutoMapperConfig.RegisterAllMappings();
+            var mapper = dtoConfig.CreateMapper();
+
+            apiAppService = new ApiAppService(new AzureStorageQueue(), 
+                mapper, new ProductService(new ProducRepository(
+                    new Infrastructure.DataAccess.Contexts.ProductContext())));
+
+            apiAppService.AddProduct(product);
+
+        }
 
         // GET: api/ProductDTO
         public IQueryable<ProductDTO> GetProducts()
